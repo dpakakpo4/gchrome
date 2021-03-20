@@ -1,0 +1,186 @@
+body{
+    font-family: 'Segoe UI', Tahoma, Verdana, 'sans-serif';
+    font-size: large;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    /* background-image: url('https://41.media.tumblr.com/efd15be8d41b12a7b0ef17fba27c3e20/tumblr_mqqy59HMaf1qzattso1_1280.jpg'); */
+    /* background-image: url('https://images.unsplash.com/photo-1464802686167-b939a6910659?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2233&q=80'); */
+    background-image: url('https://images.unsplash.com/photo-1451187580459-43490279c0fa?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2252&q=80');
+    background-repeat: no-repeat;
+    background-size: cover;
+    transition:all 2s ease;
+}
+
+.container{
+    background-color: rgba(255,255,255,.5);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: space-evenly;
+    border-radius: 2em;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    margin: 0 8em 0 8em;
+    transition:all 0.3s ease;
+}
+
+.box{
+    position: relative;
+    width: 6em;
+    height: 6em;
+    background-size: cover;
+    border-radius: 0.5em;
+    margin: 1em;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px;
+    cursor: pointer;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    transition: background 400ms;
+}
+
+.shorcutMain{
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    transition:all 0.3s ease;
+}
+
+
+.menu{
+    height: 2em;
+    width: 2em;
+    background-color: gray;
+    border-radius: 50%;
+    transition:all 0.3s ease;
+}
+.menu:hover{
+    animation: yinyang 1s ease-in-out 1s infinite alternate-reverse;
+}
+
+.animate__animated.animate__fadeIn {
+    --animate-duration: 5s;
+}  
+
+.modal{
+    display: none;
+    z-index: 10000;
+    width: 30%;
+    height: 30%;
+    background-color: white;
+    border-radius: 1em;
+    box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
+}
+.modal.visible{
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#modal_head{
+    position: relative;
+    right: 0;
+    top: 15px;
+    cursor: pointer;
+}
+#modal_head:hover{
+    transform: scale(1.2);
+    transition: all 2s ease;
+}
+#modal_body{
+    width: 100%;
+    flex: 5;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#modal_bottom{
+    background-color: darkslateblue;
+    flex:1;
+}
+
+#url{
+    height: 40px;
+    outline: none;
+    border: none;
+    font-size: large;
+    font-weight: bolder;
+    border: 1px solid black;
+    border-right: none;
+    border-radius: 10px 0 0 10px;
+    text-align: center;
+    text-overflow: ellipsis;
+    
+}
+
+#imageChoice{
+    display: none;
+}
+
+form#urlForm{
+    display: flex;
+    transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+}
+
+button[type='submit']{
+    height: 44px;
+    outline: none;
+    font-size: large;
+    border: 1px solid black;
+    border-left: none;
+    border-radius: 0 10px 10px 0;
+    font-weight: bolder;
+    outline: none;
+    background-color: grey;
+    color: white;
+    cursor: pointer;
+}
+#add{
+    cursor: pointer;
+    margin-right: 20px;
+}
+
+#image{
+    width: 200px;
+    height: 100px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: background 0s;
+    border-radius: 12px;
+}
+
+@keyframes yinyang{
+    0%{
+        transform: scale(1);
+    }
+    50%{
+        transform: scale(1.5);
+    }
+    75%{
+        transform: scale(2);
+    }
+    85%{
+        transform: scale(1.5);
+    }
+    100%{
+        transform: scale(1);
+    }
+
+}
+
+@keyframes ripple {
+    to {
+      transform: scale(4);
+      opacity: 0;
+    }
+}
